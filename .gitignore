@@ -1,0 +1,16 @@
+# Local toolchain — bootstrapped by `.\build.ps1 -Setup`, not source
+tools/
+
+# Arduino / esptool build artifacts
+build/
+*.bin
+*.elf
+*.hex
+*.map
+
+# OS / editor
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+.DS_Store
