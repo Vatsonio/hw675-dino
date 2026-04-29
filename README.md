@@ -2,6 +2,8 @@
 
 Chrome T-Rex jump game for the **HW-675** dev board (ESP32-C3 + 0.42" SSD1306 OLED, single button on GPIO9).
 
+![HW-675 running the dino game](docs/dino.jpg)
+
 ## Hardware
 
 | | |
@@ -32,8 +34,8 @@ If upload fails with `Failed to connect`: hold the **BOOT** button (GPIO9), tap 
 
 ## How to play
 
-- **READY** screen → press button to start (it doubles as the first jump).
-- **PLAYING** → press button to jump over cacti. Speed increases over time.
+- **READY** screen → press button to start. The dino starts running and you get a 2-second runway before the first cactus appears.
+- **PLAYING** → press button to jump. Speed gradually ramps up to a comfortable cap over ~66 seconds.
 - **GAME OVER** → wait ½ second, press button to restart. High score is kept in RAM.
 
 ## Project layout
@@ -43,6 +45,8 @@ HW-675_dino\
 ├── dino\
 │   ├── dino.ino        # game logic + rendering
 │   └── sprites.h       # XBM bitmaps in PROGMEM
+├── docs\
+│   └── dino.jpg        # board running the game
 ├── tools\
 │   └── arduino-cli.exe # downloaded by -Setup
 ├── build.ps1           # build / upload driver
